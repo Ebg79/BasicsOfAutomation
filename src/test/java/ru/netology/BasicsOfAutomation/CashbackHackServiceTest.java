@@ -1,17 +1,17 @@
 package ru.netology.BasicsOfAutomation;
 
-import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+public class CashbackHackServiceTest {
 
-class CashbackHackServiceTest {
     @Test
     public void testRemain() {
         CashbackHackService cashbackHackService = new CashbackHackService();
         int amount = 900;
         int expected = 100;
         int actual = cashbackHackService.remain(amount);
-       assertEquals(actual, expected);
+        Assert.assertEquals(actual, expected);
     }
 
     @Test
@@ -20,7 +20,7 @@ class CashbackHackServiceTest {
         int amount = 1000;
         int expected = 0;
         int actual = cashbackHackService.remain(amount);
-       assertEquals(actual, expected);
+        Assert.assertEquals(actual, expected);
     }
 
     @Test
@@ -29,7 +29,7 @@ class CashbackHackServiceTest {
         int amount = 0;
         int expected = 1000;
         int actual = cashbackHackService.remain(amount);
-        assertEquals(actual, expected);
+        Assert.assertEquals(actual, expected);
     }
 
 }
